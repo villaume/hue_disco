@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "hue_disco"
+version = "0.1.0"
+description = ""
+authors = ["Erik Villaume"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+paho-mqtt = "^2.1.0"
+numpy = "^2.1.1"
+requests = "^2.32.3"
+fastapi = {extras = ["standard"], version = "^0.115.0"}
+fastapi-mqtt = "^2.2.0"
+httpx = "^0.27.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
+exclude = [".venv"]
+
+[tool.poetry.group.dev.dependencies]
+watchdog = "^4.0.0"
+pytest = "^8.3.2"
+pyright = "^1.1.380"
